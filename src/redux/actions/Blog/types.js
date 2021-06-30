@@ -1,0 +1,15 @@
+const GET_BLOGS = 'BLOG/GET_BLOGS';
+const CREATE_BLOG = 'BLOG/CREATE_BLOG';
+const GET_BLOGDETAILS = 'BLOG/GET_BLOGDETAILS';
+const UPDATE_BLOG = 'BLOG/UPDATE_BLOG';
+const REMOVE_BLOG = 'BLOG/REMOVE_BLOG';
+
+const actionTypes = {
+  GET_BLOGS,
+  CREATE_BLOG,
+  GET_BLOGDETAILS,
+  UPDATE_BLOG,
+  REMOVE_BLOG,
+};
+
+export default actionTypes;
