@@ -6,6 +6,7 @@ import configureStore, { history } from './configureStore';
 import routes from './routes';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 export const store = configureStore({});
 
 ReactDOM.render(
