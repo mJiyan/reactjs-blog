@@ -43,16 +43,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "eslint src/**/*.js src/**/*.jsx --fix"
     }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint src/**/*.js src/**/*.jsx --fix"
-    ],
-    "*.{json,md,html}": [
-      "prettier --write"
-    ]
   },
   "browserslist": {
     "production": [
@@ -87,7 +79,6 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
     "husky": "^7.0.0",
-    "lint-staged": "^11.0.0",
     "mini-css-extract-plugin": "^2.0.0",
     "optimize-css-assets-webpack-plugin": "^6.0.1",
     "prettier": "^2.3.2",
