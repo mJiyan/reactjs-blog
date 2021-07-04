@@ -45,7 +45,7 @@
     "format": "prettier src/**/*.js src/**/*.jsx --write"
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx}": [
+    "src/**/*.{js,jsx}": [
       "eslint --ext .jsx --ext .js ./src --fix"
     ]
   },
