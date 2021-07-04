@@ -19,7 +19,7 @@ const BlogDetail = (props) => {
     const loadBlog = async () => {
       const { success, error } = await dispatch(actions.getBlogDetails(id));
       if (!success) {
-                        window.console.log('An error occurred with', error.status, error.statusText, 'status');
+                          window.console.log('An error occurred with', error.status, error.statusText, 'status');
       }
     };
     loadBlog();
