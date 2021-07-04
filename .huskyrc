@@ -1,6 +1,6 @@
 {
   "hooks": {
-    "pre-commit": "yarn lint",
-    "pre-push": "yarn lint:fix"
+    "pre-commit": "eslint src/**/*.js src/**/*.jsx",
+    "pre-push": "eslint src/**/*.js src/**/*.jsx --fix"
   }
 }
