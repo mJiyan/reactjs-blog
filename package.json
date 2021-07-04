@@ -54,7 +54,8 @@
   "lint-staged": {
     "**/*.jsx": [
       "eslint src/**/*.js src/**/*.jsx --fix",
-      "yarn run lint:fix"
+      "prettier-eslint --write",
+      "git add"
     ]
   },
   "browserslist": {

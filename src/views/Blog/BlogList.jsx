@@ -19,7 +19,7 @@ const BlogList = () => {
     const loadBlogs = async () => {
       const { success, error } = await dispatch(actions.getBlogs());
       if (!success) {
-        console.log('An error occurred with', error.status, error.statusText, 'status');
+                console.log('An error occurred with', error.status, error.statusText, 'status');
       }
     };
     loadBlogs();
