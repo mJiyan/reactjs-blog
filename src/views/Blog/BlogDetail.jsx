@@ -13,7 +13,7 @@ const BlogDetail = (props) => {
   } = props;
 
   const blog = useSelector((state) => state.BlogReducer.blog);
-  const dispatch = useDispatch        ();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const loadBlog = async () => {
