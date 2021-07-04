@@ -21,7 +21,7 @@ const BlogDetail = (props) => {
       if (!success) {
 
              
-              window.console.log('An error occurred with', error.status, error.statusText, 'status');
+                window.console.log('An error occurred with', error.status, error.statusText, 'status');
       }
     };
     loadBlog();
