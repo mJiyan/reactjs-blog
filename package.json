@@ -12,7 +12,6 @@
     "connected-react-router": "^6.9.1",
     "cross-env": "^7.0.3",
     "history": "^5.0.0",
-    "husky": "^7.0.0",
     "json-server": "^0.16.3",
     "path": "^0.12.7",
     "prop-types": "^15.7.2",
@@ -45,18 +44,15 @@
     "lint:fix": "eslint src/**/*.js src/**/*.jsx --fix",
     "format": "prettier src/**/*.js src/**/*.jsx --write"
   },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --ext .jsx --ext .js ./src --fix"
+    ]
+  },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run lint:fix",
-      "pre-push": "yarn run lint"
+      "pre-commit": "lint-staged"
     }
-  },
-  "lint-staged": {
-    "**/*.jsx": [
-      "eslint src/**/*.js src/**/*.jsx --fix",
-      "prettier-eslint --write",
-      "git add"
-    ]
   },
   "browserslist": {
     "production": [
@@ -90,6 +86,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
+    "husky": "^7.0.0",
     "lint-staged": "^11.0.0",
     "mini-css-extract-plugin": "^2.0.0",
     "optimize-css-assets-webpack-plugin": "^6.0.1",
