@@ -39,7 +39,10 @@
     "start": "webpack serve --config ./webpack.config.js --mode development & json-server --watch ./src/@fake-api/db.json --port 8081",
     "build": "webpack --mode production",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src/**/*.js src/**/*.jsx",
+    "lint:fix": "eslint src/**/*.js src/**/*.jsx --fix",
+    "format": "prettier --write ./src/**/*.js"
   },
   "husky": {
     "hooks": {
@@ -48,8 +51,8 @@
   },
   "lint-staged": {
     "**/*.jsx": [
-      "eslint src/**/*.js src/**/*.jsx --fix",
-      "git add"
+      "yarn run format",
+      "yarn run lint:fix"
     ]
   },
   "browserslist": {
