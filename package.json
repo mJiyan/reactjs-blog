@@ -48,7 +48,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --quiet --fix"
+      "eslint src/**/*.js src/**/*.jsx --fix"
     ],
     "*.{json,md,html}": [
       "prettier --write"

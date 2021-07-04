@@ -18,22 +18,18 @@ const RemoveBlogModal = (props) => {
   };
 
   return (
-    <Modal
-      {...props}
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
+    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered>
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Remove the blog
-        </Modal.Title>
+        <Modal.Title id="contained-modal-title-vcenter">Remove the blog</Modal.Title>
       </Modal.Header>
-      <Modal.Body>
-        Are you sure you want to remove it?
-      </Modal.Body>
+      <Modal.Body>Are you sure you want to remove it?</Modal.Body>
       <Modal.Footer>
-        <Button onClick={() => removeBlog(id)} variant="danger">Remove</Button>
-        <Button onClick={() => props.onHide()} variant="secondary">Close</Button>
+        <Button onClick={() => removeBlog(id)} variant="danger">
+          Remove
+        </Button>
+        <Button onClick={() => props.onHide()} variant="secondary">
+          Close
+        </Button>
       </Modal.Footer>
     </Modal>
   );

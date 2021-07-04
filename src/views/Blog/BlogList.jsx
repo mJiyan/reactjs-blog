@@ -3,8 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Button, Container, Table } from 'react-bootstrap';
 import * as actions from '../../redux/actions/Blog';
-import RemoveBlogModal from '../../components/Modals/RemoveBlogModal';
-import AddEditBlogModal from '../../components/Modals/AddEditBlogModal';
+import { AddEditBlogModal, RemoveBlogModal } from '../../components';
 
 const BlogList = () => {
   const [removeModalShow, setRemoveModalShow] = useState(false);

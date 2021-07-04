@@ -17,9 +17,10 @@ import { connectRouter } from 'connected-react-router';
  * Creates the main reducer with the dynamically injected ones
  */
 
-const createRootReducer = (history, injectedReducers) => combineReducers({
-  router: connectRouter(history),
-  ...injectedReducers,
-});
+const createRootReducer = (history, injectedReducers) =>
+  combineReducers({
+    router: connectRouter(history),
+    ...injectedReducers,
+  });
 
 export default createRootReducer;
