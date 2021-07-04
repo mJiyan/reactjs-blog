@@ -45,9 +45,7 @@
     "format": "prettier src/**/*.js src/**/*.jsx --write"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx}": [
-      "eslint --ext .jsx --ext .js ./src --fix"
-    ]
+    "src/**/*.{js,jsx}": "yarn lint:fix"
   },
   "husky": {
     "hooks": {
