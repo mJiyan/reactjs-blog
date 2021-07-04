@@ -12,26 +12,29 @@ const AddEditBlogModal = (props) => {
   const { register, handleSubmit, setValue } = useForm();
   // set defaultValues for inputs
   const inputs = ['title', 'content', 'isPublished'];
-  const blogInputs = id !== 0
-    ? inputs.forEach((input) => setValue(input, blog[input]))
-    : inputs.forEach((input) => setValue(input, ''));
+  const blogInputs =
+    id !== 0
+      ? inputs.forEach((input) => setValue(input, blog[input]))
+      : inputs.forEach((input) => setValue(input, ''));
 
   useEffect(() => {
     if (id !== 0) {
       const loadBlog = async () => {
         const { success, error } = await dispatch(actions.getBlogDetails(id));
-        if (!success) window.console.log('An error occurred with', error.status, error.statusText, 'status');
+        if (!success)
+          console.log('An error occurred with', error.status, error.statusText, 'status');
       };
       loadBlog();
     }
   }, [dispatch, id, blogInputs]);
 
   const onSubmit = async (theBlog) => {
-    const { success, error } = id !== 0
-      ? await dispatch(actions.updateBlog(theBlog, id))
-      : await dispatch(actions.createBlog(theBlog));
+    const { success, error } =
+      id !== 0
+        ? await dispatch(actions.updateBlog(theBlog, id))
+        : await dispatch(actions.createBlog(theBlog));
 
-    if (!success) window.console.log('An error occurred with', error.status, error.statusText, 'status');
+    if (!success) console.log('An error occurred with', error.status, error.statusText, 'status');
     else {
       dispatch(actions.getBlogs());
       props.onHide();

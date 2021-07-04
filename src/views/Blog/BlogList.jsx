@@ -19,7 +19,9 @@ const BlogList = () => {
   useEffect(() => {
     const loadBlogs = async () => {
       const { success, error } = await dispatch(actions.getBlogs());
-      if (!success) window.console.log('An error occurred with', error.status, error.statusText, 'status');
+      if (!success) {
+        console.log('An error occurred with', error.status, error.statusText, 'status');
+      }
     };
     loadBlogs();
   }, [dispatch]);
@@ -49,26 +51,26 @@ const BlogList = () => {
           <tbody>
             {blogs.map((item, key) => (
               <tr key={item.id}>
+                <td>{key + 1}</td>
+                <td>{item.title}</td>
                 <td>
-                  {key + 1}
-                </td>
-                <td>
-                  {item.title}
-                </td>
-                <td>
-                  <Link to={`/blog/details/${item.id}`}><Button variant="warning">Detail</Button></Link>
-                  {' '}
-                  {' '}
-                  <Button onClick={() => addEditBlog(item.id)} variant="info">Update</Button>
-                  {' '}
-                  {' '}
-                  <Button onClick={() => removeBlog(item.id)} variant="danger">Remove</Button>
+                  <Link to={`/blog/details/${item.id}`}>
+                    <Button variant="warning">Detail</Button>
+                  </Link>{' '}
+                  <Button onClick={() => addEditBlog(item.id)} variant="info">
+                    Update
+                  </Button>{' '}
+                  <Button onClick={() => removeBlog(item.id)} variant="danger">
+                    Remove
+                  </Button>
                 </td>
               </tr>
             ))}
           </tbody>
         </Table>
-        <Button onClick={() => addEditBlog(0)} variant="success" size="lg">Create a new blog</Button>
+        <Button onClick={() => addEditBlog(0)} variant="success" size="lg">
+          Create a new blog
+        </Button>
       </Container>
 
       <AddEditBlogModal

@@ -10,7 +10,7 @@ const RemoveBlogModal = (props) => {
 
   const removeBlog = async (blogId) => {
     const { success, error } = await dispatch(actions.removeBlog(blogId));
-    if (!success) window.console.log('An error occurred with', error.status, error.statusText, 'status');
+    if (!success) console.log('An error occurred with', error.status, error.statusText, 'status');
     else {
       dispatch(actions.getBlogs());
       props.onHide();

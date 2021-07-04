@@ -6,7 +6,11 @@ import { Link } from 'react-router-dom';
 import * as actions from '../../redux/actions/Blog';
 
 const BlogDetail = (props) => {
-  const { match: { params: { id } } } = props;
+  const {
+    match: {
+      params: { id },
+    },
+  } = props;
 
   const blog = useSelector((state) => state.BlogReducer.blog);
   const dispatch = useDispatch();
@@ -14,7 +18,9 @@ const BlogDetail = (props) => {
   useEffect(() => {
     const loadBlog = async () => {
       const { success, error } = await dispatch(actions.getBlogDetails(id));
-      if (!success) window.console.log('An error occurred with', error.status, error.statusText, 'status');
+      if (!success) {
+        console.log('An error occurred with', error.status, error.statusText, 'status');
+      }
     };
     loadBlog();
   }, [dispatch, id]);
@@ -24,42 +30,31 @@ const BlogDetail = (props) => {
       <Card className="text-center">
         <Card.Header>
           Blog id:
-          {' '}
           {blog.id}
         </Card.Header>
         <Card.Body>
           <Card.Title>{blog.title}</Card.Title>
-          <Card.Text>
-            {blog.content}
-          </Card.Text>
+
+          <Card.Text>{blog.content}</Card.Text>
           <Link to="/">
             <Button variant="primary">
-              <ArrowLeft />
-              {' '}
-              Go to blog list
-              {' '}
+              <ArrowLeft /> Go to blog list{' '}
             </Button>
           </Link>
         </Card.Body>
         <Card.Footer className="text-muted">
           {blog.isPublished === true ? (
             <p>
-              <Check2All />
-              {' '}
-              Published
+              <Check2All /> Publi shed
             </p>
           ) : (
             <p>
-              <DashCircleFill />
-              {' '}
-              Not published
+              <DashCircleFill /> Not published
             </p>
-          )}
-          {' '}
+          )}{' '}
         </Card.Footer>
       </Card>
     </Container>
-
   );
 };
 
