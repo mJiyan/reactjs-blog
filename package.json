@@ -53,7 +53,7 @@
   },
   "lint-staged": {
     "**/*.jsx": [
-      "yarn run format",
+      "eslint src/**/*.js src/**/*.jsx --fix",
       "yarn run lint:fix"
     ]
   },
