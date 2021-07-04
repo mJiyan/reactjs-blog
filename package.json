@@ -52,7 +52,7 @@
     }
   },
   "lint-staged": {
-    "**/*.js": [
+    "**/*.jsx": [
       "yarn run format",
       "yarn run lint:fix"
     ]
