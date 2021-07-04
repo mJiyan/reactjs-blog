@@ -1,6 +1,0 @@
-{
-  "hooks": {
-    "pre-commit": "eslint src/**/*.js src/**/*.jsx",
-    "pre-push": "eslint src/**/*.js src/**/*.jsx --fix"
-  }
-}
