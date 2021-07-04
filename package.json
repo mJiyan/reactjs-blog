@@ -45,6 +45,12 @@
     "lint:fix": "eslint src/**/*.js src/**/*.jsx --fix",
     "format": "prettier src/**/*.js src/**/*.jsx --write"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "eslint src/**/*.js src/**/*.jsx",
+      "pre-push": "eslint src/**/*.js src/**/*.jsx --fix"
+    }
+  },
   "lint-staged": {
     "src/**/*.{js,jsx}": "yarn lint:fix"
   },
