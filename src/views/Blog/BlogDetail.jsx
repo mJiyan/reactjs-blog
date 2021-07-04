@@ -22,7 +22,7 @@ const BlogDetail = (props) => {
         window.console.log('An error occurred with', error.status, error.statusText, 'status');
       }
     };
-    loadBlog();
+    loadBlog          ();
   }, [dispatch, id]);
 
   return (
