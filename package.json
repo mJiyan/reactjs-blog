@@ -42,15 +42,16 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js src/**/*.jsx",
     "lint:fix": "eslint src/**/*.js src/**/*.jsx --fix",
-    "format": "prettier --write ./src/**/*.js"
+    "format": "prettier src/**/*.js src/**/*.jsx --write"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn run lint"
     }
   },
   "lint-staged": {
-    "**/*.jsx": [
+    "**/*.js": [
       "yarn run format",
       "yarn run lint:fix"
     ]
