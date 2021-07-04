@@ -41,6 +41,19 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --quiet --fix"
+    ],
+    "*.{json,md,html}": [
+      "prettier --write"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -73,6 +86,8 @@
     "eslint-plugin-prettier": "^3.4.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.0.0",
     "mini-css-extract-plugin": "^2.0.0",
     "optimize-css-assets-webpack-plugin": "^6.0.1",
     "prettier": "^2.3.2",
