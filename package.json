@@ -42,11 +42,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js src/**/*.jsx",
     "lint:fix": "eslint src/**/*.js src/**/*.jsx --fix",
-    "format": "prettier src/**/*.js src/**/*.jsx --write",
-    "prepare": "husky install"
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx}": ["yarn lint:fix", "git add"]
+    "format": "prettier src/**/*.js src/**/*.jsx --write"
   },
   "browserslist": {
     "production": [
@@ -80,7 +76,6 @@
     "eslint-plugin-prettier": "^3.4.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
-    "lint-staged": "^11.0.0",
     "mini-css-extract-plugin": "^2.0.0",
     "optimize-css-assets-webpack-plugin": "^6.0.1",
     "pinst": "^2.1.6",
