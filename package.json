@@ -40,9 +40,9 @@
     "build": "webpack --mode production",
     "test": "jest --config ./jest.config.js",
     "eject": "react-scripts eject",
-    "lint": "eslint src/**/*.js src/**/*.jsx",
-    "lint:fix": "eslint src/**/*.js src/**/*.jsx --fix",
-    "format": "prettier src/**/*.js src/**/*.jsx --write"
+    "lint": "eslint src/**/*.{js, jsx}",
+    "lint:fix": "eslint src/**/*{js, jsx} --fix",
+    "format": "prettier src/**/*{js, jsx} --write"
   },
   "browserslist": {
     "production": [
