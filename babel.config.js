@@ -23,5 +23,13 @@ module.exports = {
         '@babel/plugin-transform-react-constant-elements',
       ],
     },
+    test: {
+      plugins: [
+        "@babel/plugin-proposal-class-properties",
+        ["babel-plugin-styled-components", { "displayName": true }],
+        "@babel/plugin-syntax-dynamic-import"
+      ],
+      presets: ["@babel/preset-env", "@babel/preset-react"]
+    }
   },
 };
