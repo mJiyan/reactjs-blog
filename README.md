@@ -1,17 +1,8 @@
 # ReactJS Blog
 
-A boilerplate application built for CRUD operations.
+A boilerplate application developed with Hooks + Redux for CRUD operations.
 
-eslint
-prettier
-husky
-babel
-webpack
-jest
-fake-api
-redux-thunk
-hooks
-
+Tools that I used while developing the project are; Eslint, Prettier, Husky, Babel, Webpack, Jest, fake-api
 
 ## Table of Contents
 - [Project Overview](#projectoverview)
