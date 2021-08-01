@@ -2,7 +2,8 @@
 
 A boilerplate application developed with Hooks + Redux for CRUD operations.
 
-Tools that I used while developing the project are; Eslint, Prettier, Husky, Babel, Webpack, Jest, fake-api
+Tools that I used while developing the project are; 
+Eslint, Prettier, Husky, Babel, Webpack, Jest, fake-api
 
 ## Table of Contents
 - [Project Overview](#projectoverview)
