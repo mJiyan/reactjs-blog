@@ -45,7 +45,7 @@ const BlogDetail = (props) => {
         <Card.Footer className="text-muted">
           {blog.isPublished === true ? (
             <p>
-              <Check2All /> Publi shed
+              <Check2All /> Published
             </p>
           ) : (
             <p>
