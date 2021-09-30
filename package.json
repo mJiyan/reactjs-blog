@@ -38,7 +38,7 @@
     "enzyme": "^3.11.0"
   },
   "scripts": {
-    "start": "webpack serve --config ./webpack.config.js --mode development & json-server --watch ./src/@fake-api/db.json --port 8081",
+    "start": "webpack serve --config ./webpack.config.js --mode development --host 0.0.0.0 & json-server --watch ./src/@fake-api/db.json --port 8081",
     "build": "webpack --mode production",
     "test": "jest --config ./jest.config.js",
     "eject": "react-scripts eject",

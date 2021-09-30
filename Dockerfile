@@ -1,11 +1,19 @@
-FROM node:alpine
+# Base image
+# Make folder to put our files in
+FROM node
 
-WORKDIR /app
+RUN mkdir -p /usr/src/app
 
-COPY package.json /app
+WORKDIR /usr/src/app
 
-RUN yarn install
+COPY package*.json ./
 
-COPY . /app
+RUN npm install --legacy-peer-deps
 
-CMD ["yarn", "run", "start"]
+COPY . .
+
+# Command to run our app
+EXPOSE 8080
+
+CMD [ "npm", "start" ] 
+
